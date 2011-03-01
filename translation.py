@@ -17,8 +17,9 @@ def readDictionary(file):
 
 def readFile(file):
   sourceFile = open(file, 'r')
-  return sourceFile.read()
+  file = sourceFile.read()
   sourceFile.close()
+  return file
       
 def translateWords(string):
   words = string.split(' ')
