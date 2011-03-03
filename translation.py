@@ -4,6 +4,8 @@
 # Arda Kara
 # Jason Ma
 
+import string
+
 dictionary = dict()
 
 def readDictionary(file):
@@ -27,7 +29,25 @@ def translateWords(string):
   for word in words:
     result += dictionary[word] + ' '
   return result
-    
+
+# Convert all letters to lower case and remove punct
+def normalize(source):
+  normalize = ''
+  for ch in source:
+    upperIdx = string.ascii_uppercase.find(ch)
+    if upperIdx >= 0:
+      normalize += string.ascii_lowercase[upperIdx]
+    else
+      normalize += ch
+  return normalize
+      
+      
+  
 readDictionary('dictionary.txt')
 source = readFile('source.txt')
-print translateWords(source)
+normalized = normalize(source)
+print translateWords(normalized)
+
+# need to restore punctuation somehow
+# perhaps also restore capitalization?
+
