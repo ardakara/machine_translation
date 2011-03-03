@@ -1,87 +1,87 @@
 Adamı#the man
-ağacın#the tree's
-ağacına#the tree
-aklından#from his mind
-altın#gold
-altındaki#beneath
-attı#threw
-azıcık#tad
-başladı#started
-beline#his waist
-bir#one
-birer#one after the other
-birisinin#someone's
-birkaçı#a few
-Bitmişti#was done
-boyuna#always
-bu#this
-Burada#here
-çınar#plane tree
-Çınarın#the plane tree's 
-çıplak#naked
-çıtırdıyı#the crackle 
-dallarından#from its branches
-damarlı#ribbed
-de#too
-dedi#said
-derinlemesineydi#was extensive
-dibi#the bottom of
-dibini#the bottom
-doğru#toward
-dolana#until full
-doldurmuş#has filled
-duruyordu#was stopping
-düşmeye#fall
-düştü#fell
-duyunca#when heard
-ediyordu#was doing
-en#most
-gecelemeyi#spending the night
-geçirdi#have
-geldi#came
-gibi#as
-Gitti#went
-gövdeyi#the body
-gücünü#his strength 
-harcayarak#spending
-hışır#crack
-ikişer#two each
-kadar#by
-kalkamayabilir#may not rise
-kalmış#stayed
-kayalıklar#rocks
-Kayalıklara#to the rocks
-kayanın#rock's
-kendi#own
-kendine#itself
-kendisini#his own
-kırmızı#red
-koşmaya#running
-kurt#wolf
-Kuru#dry
-kuş#bird
-kuyu#well
-olmaz#impossible
-örtmüştü#had covered up
-ötedeydi#was yonder
-öteki#other
-Oturduğu#the one he is sitting on
-renkli#colored
-Sapsarı#very yellow
-Sonra#later
-uçtu#flew
-ucunda#at the tip
-üstünde#above
-üstüne#above
-var#there
-vardı#there was
-yapraklar#leaves
-yapraklardan#out of leaves
-yaprakların#the leaves'
-yarı#half
-yeniden#once again
-yer#place
-yerden#from the place
-Yorgundu#was tired
-yüksek#high
-Yumuşacık#fluffy
+ağacın#the tree's#adjective
+ağacına#the tree#noun
+aklından#from his mind#adverb
+altın#gold#noun
+altındaki#beneath#adverb
+attı#threw#verb
+azıcık#tad#adjective
+başladı#started#verb
+beline#his waist#noun
+bir#one#adjective
+birer#one after the other#adverb
+birisinin#someone's#adjective
+birkaçı#a few#adjective
+Bitmişti#was done#verb
+boyuna#always#adverb
+bu#this#pronoun
+Burada#here#adjective
+çınar#plane tree#noun
+Çınarın#the plane tree's#adjective 
+çıplak#naked#adjective
+çıtırdıyı#the crackle#noun
+dallarından#from its branches#adverb
+damarlı#ribbed#adjective
+de#too#adverb
+dedi#said#verb
+derinlemesineydi#was extensive#verb
+dibi#the bottom of#adjective
+dibini#the bottom#noun
+doğru#toward#adverb
+dolana#until full#adverb
+doldurmuş#has filled#verb
+duruyordu#was stopping#verb
+düşmeye#fall#noun
+düştü#fell#verb
+duyunca#when heard#conjunction
+ediyordu#was doing#verb
+en#most#adjective
+gecelemeyi#spending the night#noun
+geçirdi#have#verb
+geldi#came#verb
+gibi#as#adverb
+Gitti#went#verb
+gövdeyi#the body#noun
+gücünü#his strength#noun
+harcayarak#while spending#adverb
+hışır#crack#noun
+ikişer#two each#adjective
+kadar#by#preposition
+kalkamayabilir#may not rise#verb
+kalmış#stayed#verb
+kayalıklar#rocks#noun
+Kayalıklara#to the rocks#adverb
+kayanın#rock's#adjective
+kendi#own#adjective
+kendine#itself#pronoun
+kendisini#his own#adjective
+kırmızı#red#adjective
+koşmaya#to run#noun
+kurt#wolf#noun
+Kuru#dry#adjective
+kuş#bird#noun
+kuyu#well#noun
+olmaz#impossible#adjective
+örtmüştü#had covered up#verb
+ötedeydi#was yonder#verb
+öteki#other#adjective
+Oturduğu#that he is sitting on#adjective
+renkli#colored#adjective
+Sapsarı#very yellow#adjective
+Sonra#later#adverb
+uçtu#flew#verb
+ucunda#is at the tip#verb
+üstünde#is above#verb
+üstüne#above#adverb
+var#there is#verb
+vardı#there was#verb
+yapraklar#leaves#noun
+yapraklardan#from leaves#adverb
+yaprakların#the leaves'#adjective
+yarı#half#adjective
+yeniden#once again#adverb
+yer#place#noun
+yerden#from the place#adverb
+Yorgundu#was tired#verb
+yüksek#high#adjective
+Yumuşacık#fluffy#adjective
