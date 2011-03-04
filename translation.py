@@ -94,13 +94,16 @@ def applyReorderingRules(translation):
   
 readDictionary('dictionary.txt')
 source = readFile('source.txt')
+sourceSeg = source.split('.')
 normalized = normalize(source)
 translation = translateWords(normalized)
 
 applyReorderingRules(translation)
 
 for i in xrange(0, len(translation[1])):
+  print sourceSeg[i]
   print string.join(translation[0][i], ' ')
+  
   print translation[0][i]
   print translation[1][i]
   print ''
