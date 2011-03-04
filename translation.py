@@ -7,6 +7,7 @@
 import string
 
 dictionary = dict()
+partsOfSpeech = dict()
 
 def readDictionary(file):
   dictFile = open(file, 'r')
@@ -14,8 +15,11 @@ def readDictionary(file):
   for line in lines:
     line = normalize(line)
     wordpair = line.split('#')
-    if len(wordpair) > 1:
+    if len(wordpair) > 2:
       dictionary[wordpair[0]] = wordpair[1]
+      partsOfSpeech[wordpair[0]] = wordpair[2]
+    else:
+      print 'Error: malformed entry in dictionary. ' + line
   dictFile.close()
 
 def readFile(file):
@@ -23,13 +27,17 @@ def readFile(file):
   fileText = sourceFile.read()
   sourceFile.close()
   return fileText
-      
+
+# returns a three-element list:
+#   1. the string of the result, complete with punctuation added back in
+#   2. a list of the words from the translation
+#   3. a list of the parts of speech corresponding to the previous list
 def translateWords(string):
   tokens = string.split()
   result = ''
+  translatedWords = []
+  pos = []
   for token in tokens:
-    if len(token) == 0:
-      continue
     # Sometimes, words will have punctuation attached.  Usually at the end.
     # In our case, we only have commas and periods to deal with, and never both.
     
@@ -42,9 +50,11 @@ def translateWords(string):
     if word in dictionary:
       translated = dictionary[word]
       result += dictionary[word] + punct + ' '
+      translatedWords.append(dictionary[word])
+      pos.append(partsOfSpeech[word])
     else:
       print 'Error: ' + word + ' not in dictionary.  Skipping word...'
-  return result
+  return [result, translatedWords, pos]
 
 # Convert all letters to lower case
 def normalize(source):
@@ -62,7 +72,7 @@ def normalize(source):
 readDictionary('dictionary.txt')
 source = readFile('source.txt')
 normalized = normalize(source)
-print translateWords(normalized)
+print translateWords(normalized)[0]
 
 # should we also restore capitalization?
 
