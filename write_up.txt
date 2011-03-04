@@ -22,8 +22,26 @@ Turkish: Gitti, kendisini yaprakların üstüne attı.
 Gloss: went his own the leaves above threw
 English: (He) went (and) threw himself on the leaves.
 
-There were some other part of speech ordering rules that we've come up with but these didn't necessarily benefit our test paragraph. One of these is that the adverb tends to precede the verb in simple use cases, whereas the preferred usage is the opposite in English. (The boy walked slowly.)
+There were some other part of speech ordering rules that we've come up with but these didn't necessarily benefit our test paragraph. One of these is that the adverb tends to precede the verb in simple use cases, whereas the preferred usage is the opposite in English. 
 
+Turkish: Çocuk yavaşça yürüdü
+Gloss: Boy slowly walked
+Englis: The boy walked slowly
+
+Another order difference between English and Turkish is with indefinite articles. For example:
+Turkish: Tatlı bir elma
+Gloss: Tasty an apple
+English: A(any) tasty apple
+
+Turkish: Bir tatlı elma
+Gloss: One tasty apple
+English: A(specific) tasty apple
+
+Also in Turkish prepositions are usually postpositions, however, because of certain other errors we talk about below this basic rule could not be utilized in our test paragraph.
+
+Turkish: Bardak masanın üstünde.
+Gloss: Glass table's top.
+English: Glass is on top of the table.
 
 Error Analysis:
 
