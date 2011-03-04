@@ -83,13 +83,19 @@ def applyReorderingRules(translation):
     for j in xrange(0, len(pos) - 1):
       if pos[j] == 'noun' and pos[j+1] == 'verb':
         for idx in xrange(j - 1, 0, -1):
-          if (pos[idx] != 'adjective' and pos[idx] == 'adverb') or ',' in sentence[idx]:
+          if (pos[idx] != 'adjective' and pos[idx] == 'adverb'):# or ',' in sentence[idx]:
             break
         sentence.insert(idx + 1, sentence[j+1])
         sentence.pop(j+2)
         pos.insert(idx + 1, pos[j+1])
         pos.pop(j+2)
-
+    
+    if pos[0] == 'verb' and pos[-1] == 'verb':
+      pos.insert(1, pos[-1])
+      pos.pop(-1)
+      sentence.insert(1, sentence[-1])
+      sentence.pop(-1)
+    
     translation[0][i] = sentence
     translation[1][i] = pos
 
