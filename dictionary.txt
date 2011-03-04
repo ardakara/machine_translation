@@ -3,7 +3,7 @@ ağacın#the tree's#adjective
 ağacına#the tree#noun
 aklından#from his mind#adverb
 altın#gold#noun
-altındaki#beneath#adverb
+altındaki#beneath#preposition
 attı#threw#verb
 azıcık#tad#adjective
 başladı#started#verb
@@ -16,7 +16,7 @@ Bitmişti#was done#verb
 boyuna#always#adverb
 bu#this#pronoun
 Burada#here#adjective
-çınar#plane tree#noun
+çınar#plane#adjective
 Çınarın#the plane tree's#adjective 
 çıplak#naked#adjective
 çıtırdıyı#the crackle#noun
@@ -35,7 +35,7 @@ düşmeye#fall#noun
 düştü#fell#verb
 duyunca#when heard#conjunction
 ediyordu#was doing#verb
-en#most#adjective
+en#most#adverb
 gecelemeyi#spending the night#noun
 geçirdi#have#verb
 geldi#came#verb

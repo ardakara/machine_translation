@@ -34,27 +34,33 @@ def readFile(file):
 #   3. a list of the parts of speech corresponding to the previous list
 def translateWords(string):
   tokens = string.split()
-  result = ''
-  translatedWords = []
-  pos = []
+  #result = ''
+  translatedWords = [[]]
+  pos = [[]]
   for token in tokens:
     # Sometimes, words will have punctuation attached.  Usually at the end.
     # In our case, we only have commas and periods to deal with, and never both.
     
     word = token
     punct = ''
-    if token[-1] == '.' or token[-1] == ',':
+    if token[-1] == ',':
+      word = token[0:-1]
+      
+    if token[-1] == '.':
       word = token[0:-1]
       punct = token[-1]
     
     if word in dictionary:
       translated = dictionary[word]
-      result += dictionary[word] + punct + ' '
-      translatedWords.append(dictionary[word])
-      pos.append(partsOfSpeech[word])
+      #result += dictionary[word] + punct + ' '
+      translatedWords[-1].append(dictionary[word])
+      pos[-1].append(partsOfSpeech[word])
+      if punct == '.':
+        translatedWords.append([])
+        pos.append([])
     else:
       print 'Error: ' + word + ' not in dictionary.  Skipping word...'
-  return [result, translatedWords, pos]
+  return [translatedWords, pos]
 
 # Convert all letters to lower case
 def normalize(source):
@@ -67,18 +73,33 @@ def normalize(source):
       normalize += ch
   return normalize
       
-      
+def applyReorderingRules(translation):
+  for i in xrange(0, len(translation[1])):
+    sentence = translation[0][i]
+    pos = translation[1][i]
+    
+    for j in xrange(0, len(pos) - 1):
+      if pos[j] == 'noun' and pos[j+1] == 'verb':
+        temp = sentence[j]
+        sentence[j] = sentence[j+1]
+        sentence[j+1] = temp
+        pos[j+1] = 'noun'
+        pos[j] = 'verb'
+
+    translation[0][i] = sentence
+    translation[1][i] = pos
   
 readDictionary('dictionary.txt')
 source = readFile('source.txt')
 normalized = normalize(source)
 translation = translateWords(normalized)
 
-print translation[0]
+applyReorderingRules(translation)
 
 for i in xrange(0, len(translation[1])):
-  print translation[1][i] + ": " + translation[2][i]
-
+  print translation[0][i]
+  print translation[1][i]
+  print ''
 
 # should we also restore capitalization?
 
