@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 # CS 124 Assignment 7
 # Machine Translation
 # 
