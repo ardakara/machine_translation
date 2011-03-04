@@ -1,12 +1,29 @@
 Rules:
 
-One of the rules we used was swapping the order when a verb follows a noun. This is because in Turkish the object of the sentence comes before the verb whereas it comes after it in English. [insert example]
+One of the rules we used was swapping the order when a verb follows a noun. This is because in Turkish the object of the sentence comes before the verb whereas it comes after it in English.  For example:
 
-A similar rule is when there is a noun phrase that comes before a verb. We replaced the verb to come before the noun phrase since the verb should be followed by the object. Unfortunately, there is no easy way to tell if the noun is the subject of the sentence, so this introduced some errors in cases where the subject directly preceded the verb. [insert example]
+Turkish: Kuru yapraklar hışır hışır ediyordu. 
+Gloss: dry leaves crack crack was doing.
+English: Dry leaves (were) doing 'crack, crack.'
 
-If the sentence started by a verb and ended with one, then we pull the last verb next to the first one. In Turkish, predicate usually precedes the verb which is not the case in English. There wasn't an easy way to fix this in our corpus, but with some over-fitting this modified rule helped us. [insert example]
+(Punctuation added for increased fluency.)
+
+A similar rule is when there is a noun phrase that comes before a verb. We replaced the verb to come before the noun phrase since the verb should be followed by the object. Unfortunately, there is no easy way to tell if the noun is the subject of the sentence, so this introduced some errors in cases where the subject directly preceded the verb.  For example, the following works well:
+
+Turkish: Kayalıklara doğru var gücünü harcayarak yeniden koşmaya başladı. 
+Gloss: to the rocks toward there is his strength while spending once again to run started.
+English: Toward the rocks, while spending his strength, (he) once again started to run.
+
+In this case, the re-write rules works specifically for the end, where we change "once again to run started" into "once again started to run."
+
+If the sentence started by a verb and ended with one, then we pull the last verb next to the first one. In Turkish, predicate usually precedes the verb which is not the case in English. There wasn't an easy way to fix this in our corpus, but with some over-fitting this modified rule helped us.  Here's an example:
+
+Turkish: Gitti, kendisini yaprakların üstüne attı.
+Gloss: went his own the leaves above threw
+English: (He) went (and) threw himself on the leaves.
 
 There were some other part of speech ordering rules that we've come up with but these didn't necessarily benefit our test paragraph. One of these is that the adverb tends to precede the verb in simple use cases, whereas the preferred usage is the opposite in English. (The boy walked slowly.)
+
 
 Error Analysis:
 
@@ -14,8 +31,9 @@ Some of the more fundamental errors were introduced by the gloss and the part of
 
 Another fundamental issue was the fact that some of the Turkish words' glosses could only be represented by a few English words because of the conjugation and added suffixes. This made part of speech tagging more difficult in some cases, and also meant that we either wouldn't allow for these words to be shuffled, or there would be an implementation overhead. 
 
+
 Google's Results:
 
 (The Turkish text, it's official translation and the Google translation can all be found in the file memed_my_hawk.txt)
 
-Honestly, Google's translation wasn't that much better than our primitive translation engine. It even kept some of the Turkish words as they were.  
+Google's translation wasn't that much better than our primitive translation engine. It even kept some of the Turkish words as they were and there weren't many reorderings. Just like our glossary, Google also translated the wrong sense of the word "vardı", it thought that it meant "it existed" whereas it is "arrived at". The implied pronouns of Turkish most likely didn't help either, because an explicit subject for that sentence would have made it easier to notice that it's a transitive verb. 
