@@ -74,7 +74,13 @@ def normalize(source):
 readDictionary('dictionary.txt')
 source = readFile('source.txt')
 normalized = normalize(source)
-print translateWords(normalized)[0]
+translation = translateWords(normalized)
+
+print translation[0]
+
+for i in xrange(0, len(translation[1])):
+  print translation[1][i] + ": " + translation[2][i]
+
 
 # should we also restore capitalization?
 
