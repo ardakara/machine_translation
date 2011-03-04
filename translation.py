@@ -96,6 +96,13 @@ def applyReorderingRules(translation):
       sentence.insert(1, sentence[-1])
       sentence.pop(-1)
     
+    for j in xrange(len(pos) - 2):
+      if pos[j] == 'adjective' and (sentence[j+1] == 'a' or sentence[j+1] == 'an') and pos[j] == 'noun':
+        sentence.insert(j, sentence[j+1])
+        sentence.pop(j+2)
+        pos.insert(j, pos[j+1])
+        pos.pop(j+2)
+    
     translation[0][i] = sentence
     translation[1][i] = pos
 
@@ -114,6 +121,7 @@ sourceSeg = source.split('.')
 normalized = normalize(source)
 translation = translateWords(normalized)
 
+print translation[0]
 applyReorderingRules(translation)
 
 fixPeriods(translation)
