@@ -1,0 +1,10 @@
+Rules List:
+
+One of the rules we used was swapping the order when a verb follows a noun. This is because in Turkish the object of the sentence comes before the verb whereas it comes after it in English. [insert example]
+
+A similar rule is when there is a noun phrase that comes before a verb. We replaced the verb to come before the noun phrase since the verb should be followed by the object. Unfortunately, there is no easy way to tell if the noun is the subject of the sentence, so this introduced some errors in cases where the subject directly preceded the verb. [insert example]
+
+If the sentence started by a verb and ended with one, then we pull the last verb next to the first one. In Turkish, predicate usually precedes the verb which is not the case in English. There wasn't an easy way to fix this in our corpus, but with some over-fitting this modified rule helped us. [insert example]
+
+
+
