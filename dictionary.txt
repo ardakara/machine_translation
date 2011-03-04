@@ -1,6 +1,6 @@
 Adamı#the man#noun
 ağacın#the tree's#adjective
-ağacına#the tree#noun
+ağacına#tree#noun
 aklından#from his mind#adverb
 altın#gold#noun
 altındaki#beneath#preposition
