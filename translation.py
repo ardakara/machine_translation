@@ -63,7 +63,7 @@ def translateWords(string):
         pos.append([])
     else:
       print 'Error: ' + word + ' not in dictionary.  Skipping word...'
-  return [translatedWords, pos]
+  return [translatedWords[0:-1], pos[0:-1]]
 
 # Convert all letters to lower case
 def normalize(source):
@@ -91,7 +91,16 @@ def applyReorderingRules(translation):
 
     translation[0][i] = sentence
     translation[1][i] = pos
-  
+
+def fixPeriods(translation):
+  for sIdx in xrange(len(translation[0])):
+    sentence = translation[0][sIdx]
+    for i in xrange(len(sentence)):
+      word = sentence[i]
+      if '.' in word:
+        sentence[i] = word[0:-1]
+    translation[0][sIdx][-1] += '.'
+    
 readDictionary('dictionary.txt')
 source = readFile('source.txt')
 sourceSeg = source.split('.')
@@ -99,6 +108,8 @@ normalized = normalize(source)
 translation = translateWords(normalized)
 
 applyReorderingRules(translation)
+
+fixPeriods(translation)
 
 for i in xrange(0, len(translation[1])):
   print sourceSeg[i]
