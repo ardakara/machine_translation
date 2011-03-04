@@ -47,6 +47,7 @@ def translateWords(string):
     punct = ''
     if token[-1] == ',':
       word = token[0:-1]
+      punct = token[-1]
       
     if token[-1] == '.':
       word = token[0:-1]
@@ -55,7 +56,7 @@ def translateWords(string):
     if word in dictionary:
       translated = dictionary[word]
       #result += dictionary[word] + punct + ' '
-      translatedWords[-1].append(dictionary[word])
+      translatedWords[-1].append(dictionary[word] + punct)
       pos[-1].append(partsOfSpeech[word])
       if punct == '.':
         translatedWords.append([])
@@ -99,6 +100,7 @@ translation = translateWords(normalized)
 applyReorderingRules(translation)
 
 for i in xrange(0, len(translation[1])):
+  print string.join(translation[0][i], ' ')
   print translation[0][i]
   print translation[1][i]
   print ''
